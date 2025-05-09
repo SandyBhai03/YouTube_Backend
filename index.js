@@ -5,6 +5,8 @@ import cors from 'cors';
 
 import conn from './connection/conn.js' // run the connection string
 
+conn();
+
 import authRoutes from './routes/userRoute.js' // user routes
 import videoRoutes from './routes/videoRoute.js' // videos routes
 import commentRoutes from './routes/commentRoute.js' // comments routes

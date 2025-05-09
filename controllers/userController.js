@@ -1,6 +1,8 @@
 import User from "../models/user.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import dotenv from 'dotenv';
+dotenv.config();
 
 // ~~~~~~~ Create For Logout Funcion ~~~~~~~~~
 const cookieOptions = { 
@@ -55,12 +57,12 @@ export const signIn = async (req, res) => {
     });
 
     if (user && (await bcrypt.compare(password, user.password))) {
-        const token = jwt.sign({ userId: user._id }, 'Its my SecretKey');
+        const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET);
         res.cookie('token', token, cookieOptions);
       res.json({ message: "Logged in successfully", success: "true", token, user});
     } else {
       res.status(400).json({ error: "Invalid credentials" });
-    }
+    }I
   } catch (error) {
     res.status(500).json({ error: "Server error" });
   }
