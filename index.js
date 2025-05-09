@@ -1,17 +1,17 @@
 import express from 'express';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
-
-
+import dotenv from 'dotenv';
 import conn from './connection/conn.js' // run the connection string
 
+dotenv.config(); // Load .env variables
 conn();
 
 import authRoutes from './routes/userRoute.js' // user routes
 import videoRoutes from './routes/videoRoute.js' // videos routes
 import commentRoutes from './routes/commentRoute.js' // comments routes
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 5000;
 
 // use cors for connect backend with frontend easily
 app.use(cors({

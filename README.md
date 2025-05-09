@@ -2,6 +2,12 @@
 
 A full-stack YouTube clone application built with the MERN stack (MongoDB, Express, React, Node.js). It supports user authentication, video uploads, search functionality, comments, and view counts.
 
+- ## Demo Video Link 👇
+
+```sh
+https://www.loom.com/share/b76492afd1864e45850ee21ac0a6cc2b?sid=fa886460-53c2-443b-af3a-f54dbe7c5fcb
+```
+
 ## 🔧 Features
 
 - User authentication (Signup/Login/Logout)
@@ -47,6 +53,20 @@ A full-stack YouTube clone application built with the MERN stack (MongoDB, Expre
 - Cloudinary (for media upload)
 
 ---
+
+## 🚀 Run Locally
+
+### Backend
+
+```sh
+
+### Clone https://github.com/SandyBhai03/Youtube-Backend.git
+
+cd Youtube-Backend
+npm install
+npm run dev
+
+```
 
 ## 📁 Folder Structure
 
@@ -128,24 +148,5 @@ Youtube-Clone
 | POST   | /commentApi/comment              | Add a comment (authenticated)         |
 | GET    | /commentApi/comment/:videoId     | Get all comments for a specific video |
 
-## 🚀 Run Locally
 
-### Backend
 
-```sh
-
-cd Youtube-Clone/Youtube-Backend
-npm install
-npm run dev
-
-```
-
-## Frontend
-
-```sh
-
-cd Youtube-Clone/Youtube-Frontend
-npm install
-npm run dev
-
-```
